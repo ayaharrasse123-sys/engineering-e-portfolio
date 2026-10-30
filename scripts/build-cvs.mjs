@@ -58,5 +58,5 @@ try {
   await writeFile(resolve(output,`aya-harrasse-${lang}.pdf`),bytes);
   console.log(`Generated ${lang.toUpperCase()} CV: 1 A4 page, ${bytes.length} bytes`);
  }
- await send('Browser.close');
+ ws.send(JSON.stringify({id:++id,method:'Browser.close'}));
 }finally{ws?.close();child.kill();}

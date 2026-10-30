@@ -34,7 +34,7 @@ export const technicalSkills = [
 ];
 export const coursework = [
   { title: bilingual('Mathematics', 'Mathématiques'), subjects: [bilingual('Analysis and calculus', 'Analyse et calcul différentiel et intégral'), bilingual('Linear algebra', 'Algèbre linéaire'), bilingual('Statistics', 'Statistiques'), bilingual('Measure theory', 'Théorie de la mesure'), bilingual('Lebesgue integration', 'Intégration de Lebesgue'), bilingual('Continuous probability', 'Probabilités continues')] },
-  { title: bilingual('Physics', 'Physique'), subjects: [bilingual('Electromagnetism', 'Électromagnétisme'), bilingual('Thermodynamics', 'Thermodynamique')] },
+  { title: bilingual('Physics', 'Physique'), subjects: [bilingual('Electromagnetism', 'Électromagnétisme'), bilingual('Thermodynamics', 'Thermodynamique'), bilingual('Optics', 'Optique'), bilingual('Wave optics', 'Optique ondulatoire'), bilingual('Mechanics', 'Mécanique'), bilingual('Electronics', 'Électronique')] },
 ];
 export const softSkills = [
   { title: bilingual('Teamwork', 'Travail en équipe'), description: bilingual('Working with others towards a shared objective.', 'Travailler avec d’autres personnes pour atteindre un objectif commun.') },
