@@ -35,7 +35,20 @@ function Note(){const {t}=usePortfolio();return <p className="content-note"><Spa
 function Frame({children}){return <motion.div initial={{opacity:0,y:12}} animate={{opacity:1,y:0}} transition={{duration:.4}}>{children}</motion.div>}
 function Header(){const {t,lang,setLang}=usePortfolio();const [open,setOpen]=useState(false);const location=useLocation();useEffect(()=>setOpen(false),[location]);return <header className="site-header"><div className="nav-wrap"><Link className="brand" to="/" aria-label="Aya Harrasse"><span className="monogram">ah<span>.</span></span><span className="brand-name">AYA HARRASSE<span>{t.portfolio}</span></span></Link><nav aria-label={lang==='en'?'Main navigation':'Navigation principale'} className={open?'navigation is-open':'navigation'}>{paths.map((path,i)=><NavLink key={path} to={path} end>{t.nav[i]}</NavLink>)}</nav><div className="nav-actions"><ThemeToggle lang={lang}/><div className="languages" aria-label={lang==='en'?'Language':'Langue'}>{['en','fr'].map(l=><button key={l} aria-pressed={lang===l} onClick={()=>setLang(l)}>{l.toUpperCase()}</button>)}</div><button className="menu-button" aria-label={t.menu} aria-expanded={open} onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button></div></div></header>}
 function Footer(){const {t}=usePortfolio();return <footer><div className="footer-top"><Link to="/" className="footer-name">Aya Harrasse<span>.</span></Link><p>{t.footer}</p><Link to="/career-project">{t.career}<ArrowUpRight size={17}/></Link></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Aya Harrasse</span><span>{t.footerNote}</span></div></footer>}
-function Engineering(){const {t,lang}=usePortfolio();return <Frame><PageHeading index={1} intro={t.academicIntro}/><SkillsOverview t={t} lang={lang}/><Note/><div className="academic-timeline">{content.academicYears.map((year,i)=><section className="year-block" key={year.year}><span className="timeline-dot">0{year.year}</span><div className="year-heading"><div><div className="eyebrow">{t.year} {year.year}</div><h2>{t.yearNames[i]}</h2></div><Badge/></div>{t.yearFields[i].map((label,j)=><Panel key={label} title={label} open={i===0&&j===0}>{j===2?<><Fields labels={t.projectFields}/>{year.projects.map((p,k)=><article key={k}><Fields labels={t.projectFields} values={[p.title,p.academicYear,p.description,p.objectives,p.technologies,p.contribution,p.results,p.skills,p.photos?.join(', '),p.reports?.join(', '),p.reflection]}/></article>)}</>:j===0&&year.courses.length?<ul>{year.courses.map((v,k)=><li key={k}><LocalText value={v}/></li>)}</ul>:j===1&&year.skills.length?<ul>{year.skills.map((v,k)=><li key={k}><LocalText value={v}/></li>)}</ul>:<p className="empty-line">{t.soon}</p>}</Panel>)}</section>)}</div></Frame>}
+function Engineering(){
+  const {t,lang}=usePortfolio();
+  return <Frame>
+    <PageHeading index={1} intro={t.academicIntro}/>
+    <SkillsOverview t={t} lang={lang}/>
+    <section className="personal-section engineering-projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">{t.projectsSection}</h2>
+      {content.academicProjects.map((project,i)=><article className="simple-card" key={i}>
+        <h3><LocalText value={project.title}/></h3>
+        <Fields labels={t.projectFields} values={[project.title,project.academicYear,project.description,project.objectives,project.technologies,project.contribution,project.results,project.skills,project.photos,project.reports,project.reflection]}/>
+      </article>)}
+    </section>
+  </Frame>;
+}
 function International(){const {t,lang}=usePortfolio();return <Frame><PageHeading index={2} intro={t.internationalIntro}/><MobilityOverview t={t} lang={lang}/><Callout/></Frame>}
 function Callout(){const {t}=usePortfolio();return <Link to="/career-project" className="callout"><div><h3>{t.plans}</h3><p>{t.plansText}</p></div><ArrowUpRight/></Link>}
 function Sustainability(){const {t,lang}=usePortfolio();return <Frame><PageHeading index={3} intro={t.sustainabilityIntro}/><EngagementOverview t={t} lang={lang}/></Frame>}

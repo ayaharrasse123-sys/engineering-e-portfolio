@@ -1,6 +1,7 @@
 // Use bilingual objects for text. Asset paths refer to files in public/.
 export const personal = { name: 'Aya Harrasse', school: 'Toulouse INP–ENSEEIHT', portrait: null, cvEn: null, cvFr: null, linkedin: null, github: 'https://github.com/ayaharrasse123-sys', video: null, transcript: { en: '', fr: '' } };
 export const academicYears = [1, 2, 3].map(year => ({ year, courses: [], skills: [], projects: [] }));
+export const academicProjects = []; // Flat project list displayed on the Engineering page.
 // Project schema: title, academicYear, description, objectives, technologies,
 // contribution, results, skills, photos, reports, reflection. Text: { en, fr }.
 export const internationalExperiences = [];

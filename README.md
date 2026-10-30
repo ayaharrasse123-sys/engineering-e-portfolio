@@ -29,7 +29,7 @@ The production build is generated in `dist/`. The preview command serves that bu
 - `src/academic.css`: academic presentation, readable section tabs, and responsive refinements.
 - `src/ProfileHome.jsx`: profile introduction and the overview of all seven sections.
 - `src/PersonalSections.jsx`: technical and soft skills, language levels, mobility preferences, civic participation, and hobbies.
-- `src/warm.css`: olive headings, coral accents, serif typography, circular portrait, social icons, and light/dark colors.
+- `src/warm.css`: petrol-blue headings, white backgrounds, copper accents, serif typography, circular portrait, social icons, and light/dark colors.
 - `src/ThemeToggle.jsx`: accessible light/dark switch with a browser-local preference.
 
 English is the first-visit default. A visitor's language choice is remembered on that browser. Changing language preserves the current route. Text content can use `{ en: 'English text', fr: 'Texte français' }` objects. Never present an unverified experience as completed.
@@ -70,7 +70,9 @@ The LinkedIn icon sits directly below the portrait. Set `personal.linkedin` to y
 
 ## Academic projects and experiences
 
-Each academic year has `courses`, `skills`, and `projects` arrays. Populate courses/skills with bilingual text objects. Projects support `title`, `academicYear`, `description`, `objectives`, `technologies`, `contribution`, `results`, `skills`, `photos`, `reports`, and `reflection`. Use bilingual prose for narrative fields; `photos` and `reports` are arrays of public paths. Media paths automatically render as photographs or document links. Verified HTTPS source links render as external links.
+The Engineering page displays skills followed by a Projects section. Projects are stored in the flat `academicProjects` array in `src/content.js`, currently empty. There are no Year 1/2/3 sections on this page. The old `academicYears` array is retained as unused content for reference.
+
+Projects support `title`, `academicYear`, `description`, `objectives`, `technologies`, `contribution`, `results`, `skills`, `photos`, `reports`, and `reflection`. Use bilingual prose for narrative fields; `photos` and `reports` are arrays of public paths. Media paths automatically render as photographs or document links. Verified HTTPS source links render as external links.
 
 International experience records support `title`, `destination`, `description`, `competencies`, `reflection`, `documents`. Activities support `title`, `photo`, `description`, `achievement`, `reflection`. Initiatives support `title`, `photo`, `description`, `results`, `skills`, `reflection`, `sdgs`. Professional experiences support `title`, `dates`, `description`, `results`, `skills`, `reflection`. Only add SDG numbers where there is a relevant, documented connection.
 
