@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, ArrowRight, BookOpen, UserRound, MapPin, GraduationCap, Sparkles } from 'lucide-react';
+import { ArrowUpRight, ArrowRight, BookOpen, UserRound, MapPin, GraduationCap, Sparkles, Linkedin, Github, FileText } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const routes = ['/engineering', '/international', '/sustainability', '/activities', '/development', '/career-project'];
@@ -13,9 +13,15 @@ export default function ProfileHome({ t, personal }) {
           <div className="profile-photo">
             {personal.portrait ? <img src={personal.portrait} alt="Aya Harrasse" /> : <><UserRound size={72} strokeWidth={.8} /><span>{t.portrait}</span></>}
           </div>
+          <div className="profile-socials" aria-label={t.socialProfiles}>
+            <Link to="/engineering" className="social-icon" aria-label={t.full[1]} title={t.full[1]}><GraduationCap size={21}/></Link>
+            {personal.github && <a href={personal.github} className="social-icon" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><Github size={20}/></a>}
+            {personal.linkedin ? <a href={personal.linkedin} className="social-icon" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><Linkedin size={20}/></a> : <span className="social-pending"><span className="social-icon" role="img" aria-label={`LinkedIn — ${t.soon}`}><Linkedin size={20}/></span><span>LinkedIn · {t.soon}</span></span>}
+          </div>
           <div className="profile-affiliation"><GraduationCap size={19} /><span>{personal.school}</span></div>
           <div className="profile-affiliation"><MapPin size={17} /><span>Toulouse, France</span></div>
           <Link className="profile-link" to="/career-project">{t.career}<ArrowUpRight size={16} /></Link>
+          <div className="profile-shortcuts"><Link to="/career-project"><FileText size={15}/>{t.cvEn} / {t.cvFr}</Link></div>
         </aside>
         <div className="profile-biography">
           <div className="eyebrow">{t.portfolio}</div>

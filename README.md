@@ -25,9 +25,11 @@ The production build is generated in `dist/`. The preview command serves that bu
 - `src/content.js`: personal details, asset links, academic years, experiences, activities, skills, role models, and mobility plans.
 - `src/translations.js`: all English and French interface copy, page introductions, and placeholder labels.
 - `src/main.jsx`: reusable components and seven page layouts.
-- `src/styles.css`: navy/white visual identity, responsive layouts, and reduced-motion behavior.
+- `src/styles.css`: base component layouts and reduced-motion behavior.
 - `src/academic.css`: academic presentation, readable section tabs, and responsive refinements.
 - `src/ProfileHome.jsx`: profile introduction and the overview of all seven sections.
+- `src/warm.css`: olive headings, coral accents, serif typography, circular portrait, social icons, and light/dark colors.
+- `src/ThemeToggle.jsx`: accessible light/dark switch with a browser-local preference.
 
 English is the first-visit default. A visitor's language choice is remembered on that browser. Changing language preserves the current route. Text content can use `{ en: 'English text', fr: 'Texte français' }` objects. Never present an unverified experience as completed.
 
@@ -62,6 +64,8 @@ transcript: { en: 'Your actual transcript', fr: 'Votre traduction' }
 ```
 
 Leave missing assets as `null`. The site only displays real CV/profile links when configured. The video player appears when a video path exists. For accessibility, include an accurate transcript and add a `<track kind="captions">` with a WebVTT file to the video element when uploading the pitch. Compress photographs, use descriptive filenames, and avoid uploading private information.
+
+The LinkedIn icon sits directly below the portrait. Set `personal.linkedin` to your own verified URL to activate it; while missing, it displays “To be added / À ajouter”. The adjacent GitHub icon uses `personal.github`. No other person's portrait, biography, or social profile is used.
 
 ## Academic projects and experiences
 
