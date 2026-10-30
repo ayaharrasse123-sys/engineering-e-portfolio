@@ -26,6 +26,8 @@ The production build is generated in `dist/`. The preview command serves that bu
 - `src/translations.js`: all English and French interface copy, page introductions, and placeholder labels.
 - `src/main.jsx`: reusable components and seven page layouts.
 - `src/styles.css`: navy/white visual identity, responsive layouts, and reduced-motion behavior.
+- `src/academic.css`: academic presentation, readable section tabs, and responsive refinements.
+- `src/ProfileHome.jsx`: profile introduction and the overview of all seven sections.
 
 English is the first-visit default. A visitor's language choice is remembered on that browser. Changing language preserves the current route. Text content can use `{ en: 'English text', fr: 'Texte français' }` objects. Never present an unverified experience as completed.
 
@@ -83,4 +85,6 @@ Do not publish documents containing information you do not want public. No hosti
 
 Run `npm.cmd run build` for the production check. Run `node scripts/verify-pages.mjs` to render all seven routes in English and French and check for incomplete rendering or untranslated placeholders. All 14 combinations passed during implementation.
 
-Visual browser verification was unavailable in the implementation environment. Manually inspect all seven routes at phone and desktop widths, the mobile navigation, keyboard focus, language switching, expandable panels, and the three mobility tabs. OS/browser reduced-motion settings disable animations. Page titles, HTML language, and description metadata update when navigating or switching languages.
+The redesigned homepage was visually checked in headless Chrome at desktop (1440 px) and mobile (390 px) widths. Both show all seven navigation links with no horizontal overflow. Temporary browser artifacts stay in the ignored `.preview/` directory. Vite excludes that directory from its file watcher.
+
+When adding content, manually inspect all seven routes at phone and desktop widths, keyboard focus, language switching, expandable panels, and the three mobility tabs. OS/browser reduced-motion settings disable animations. Page titles, HTML language, and description metadata update when navigating or switching languages.

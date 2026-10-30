@@ -26,3 +26,4 @@ service-account*.json
 .codex/
 .portfolio-verification.mjs
 *.log
+.preview/

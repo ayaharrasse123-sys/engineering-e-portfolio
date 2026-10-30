@@ -20,3 +20,12 @@ translations.fr.yearFields = [
   ['Enseignements avancés', 'Nouvelles compétences', 'Projets techniques', 'Meilleures productions', 'Expériences de travail en équipe'],
   ['Enseignements spécialisés', 'Préparation professionnelle', 'Grands projets d’ingénierie', 'Meilleures productions', 'Réflexions personnelles'],
 ];
+
+Object.assign(translations.en, {
+  interestsLabel: 'Interests', journeyLabel: 'MY JOURNEY', workLabel: 'PROJECTS & PRODUCTIONS',
+  chapterDescriptions: ['Courses, academic projects, and reflections across three years.', 'International experiences, languages, and intercultural learning.', 'Sustainability, community involvement, and responsible engineering.', 'Sports, creativity, culture, and life beyond the classroom.', 'Professional experiences, competencies, and a development roadmap.', 'CVs, video pitch, three role models, and three mobility proposals.'],
+});
+Object.assign(translations.fr, {
+  interestsLabel: 'Centres d’intérêt', journeyLabel: 'MON PARCOURS', workLabel: 'PROJETS ET PRODUCTIONS',
+  chapterDescriptions: ['Enseignements, projets académiques et réflexions sur trois années.', 'Expériences internationales, langues et apprentissages interculturels.', 'Développement durable, engagement citoyen et ingénierie responsable.', 'Sports, créativité, culture et vie au-delà des études.', 'Expériences professionnelles, compétences et feuille de route.', 'CV, pitch vidéo, trois modèles professionnels et trois projets de mobilité.'],
+});
