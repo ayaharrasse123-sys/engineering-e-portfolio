@@ -76,7 +76,7 @@ Both CVs are available through the homepage and Career Project page. Generated f
 
 Regenerate with `node scripts/build-cvs.mjs`, then run `npm.cmd run build`. The generator uses local Chrome/Chromium and checks that each PDF has one A4 page. On this Windows installation it finds Chrome automatically; elsewhere set the `CV_CHROME_PATH` environment variable to your browser executable. Browser state and inspection images stay under ignored `.preview/`. You may also open the generated HTML in a browser and print to A4 PDF.
 
-The CVs include the supplied contact email and education chronology: 2024–2025 at Lycée Moulay Hassan in Tangier, 2025–2026 at Lycée Mohammed V in Casablanca, and the current academic year 2026–2027 at ENSEEIHT. Telephone is omitted until supplied. Language levels are self-assessed. No internships, project results, or certifications have been invented.
+The CVs include the supplied contact email and education chronology: 2024–2025 at Lycée Moulay Hassan in Tangier, 2025–2026 at Lycée Mohammed V in Casablanca, and the engineering programme 2026–2029 at ENSEEIHT/N7 (in progress). Civic engagement is excluded from the CVs. Telephone is omitted until supplied. Language levels are self-assessed. No internships, project results, or certifications have been invented.
 
 ## Academic projects and experiences
 

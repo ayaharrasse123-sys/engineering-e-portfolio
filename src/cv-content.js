@@ -1,7 +1,7 @@
 // Optional contact/education details are intentionally omitted until supplied.
 // These values are published in the generated PDFs when provided.
 export const cvDetails = {
-  email: 'ayaharrasse123@gmail.com', phone: null, prepaSchool: null, prepaDates: '2024–2026', engineeringDates: '2026–2027',
+  email: 'ayaharrasse123@gmail.com', phone: null, prepaSchool: null, prepaDates: '2024–2026', engineeringDates: '2026–2029',
   prepaYears: [
     { year: { en: '2024–2025 · First year', fr: '2024–2025 · Première année' }, school: 'Lycée Moulay Hassan', city: { en: 'Tangier', fr: 'Tanger' } },
     { year: { en: '2025–2026 · Second year', fr: '2025–2026 · Deuxième année' }, school: 'Lycée Mohammed V', city: { en: 'Casablanca', fr: 'Casablanca' } },

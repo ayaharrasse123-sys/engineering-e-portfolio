@@ -23,7 +23,6 @@ function html(lang) {
   <section><h2>${escape(h.coursework)}</h2>${coursework.map(g=>`<p class="course-group"><strong>${local(g.title,lang)}:</strong> ${g.subjects.map(s=>local(s,lang)).join('; ')}.</p>`).join('')}</section>
   <section><h2>${escape(h.skills)}</h2>${[['programming',t.programming],['computing',t.computing],['systems',t.systems]].map(([group,title])=>`<div class="skills-row"><strong>${escape(title)}</strong><span>${list(technicalSkills.filter(s=>s.group===group))}</span></div>`).join('')}<div class="skills-row"><strong>${escape(t.soft)}</strong><span>${list(softSkills)}</span></div></section>
   <section><h2>${escape(h.languages)}</h2><div class="languages">${languageSkills.map(s=>`<div><strong>${local(s.language,lang)}</strong> — ${local(s.level,lang)}</div>`).join('')}</div><p class="language-note">${escape(t.languageNote)}</p></section>
-  <section><h2>${escape(h.engagement)}</h2><p>${escape(t.engagement)}</p></section>
   <section><h2>${escape(h.interests)}</h2><p>${list(activities)}</p></section>
   </main></body></html>`;
 }
