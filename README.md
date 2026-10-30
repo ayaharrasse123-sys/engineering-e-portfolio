@@ -28,6 +28,7 @@ The production build is generated in `dist/`. The preview command serves that bu
 - `src/styles.css`: base component layouts and reduced-motion behavior.
 - `src/academic.css`: academic presentation, readable section tabs, and responsive refinements.
 - `src/ProfileHome.jsx`: profile introduction and the overview of all seven sections.
+- `src/PersonalSections.jsx`: technical and soft skills, language levels, mobility preferences, civic participation, and hobbies.
 - `src/warm.css`: olive headings, coral accents, serif typography, circular portrait, social icons, and light/dark colors.
 - `src/ThemeToggle.jsx`: accessible light/dark switch with a browser-local preference.
 
@@ -73,6 +74,10 @@ Each academic year has `courses`, `skills`, and `projects` arrays. Populate cour
 
 International experience records support `title`, `destination`, `description`, `competencies`, `reflection`, `documents`. Activities support `title`, `photo`, `description`, `achievement`, `reflection`. Initiatives support `title`, `photo`, `description`, `results`, `skills`, `reflection`, `sdgs`. Professional experiences support `title`, `dates`, `description`, `results`, `skills`, `reflection`. Only add SDG numbers where there is a relevant, documented connection.
 
+The current personal content records Python, SQL, MATLAB, Linux, Windows, five self-described soft skills, Arabic (native), French (C1), English (C1), and Turkish (B1). Skills have no arbitrary percentage ratings. Running, reading, and cooking are personal interests; no competition results or specific reading history are claimed. Climate Fresk and The Trial of King Kong are confirmed participations; dates, results, and personal reflections remain to be supplied.
+
+`mobilityPreferences` describes Switzerland and London as future options. The first two detailed mobility templates use these destinations; the third remains unfilled. No host organisation, acceptance, or internship is claimed. `mobilitySources` links to official careers pages for the organisations of interest. `softSkills` and `technicalSkills` populate both engineering and career development.
+
 Role models and mobility projects already contain three complete record templates. Fill the existing keys, retaining their numeric IDs. The interactive roadmap links each mobility proposal to its corresponding role model. Actual international experiences belong on the international page; proposals belong on the career-project page.
 
 ## Publish later with GitHub and Vercel
@@ -87,7 +92,7 @@ Do not publish documents containing information you do not want public. No hosti
 
 ## Verification
 
-Run `npm.cmd run build` for the production check. Run `node scripts/verify-pages.mjs` to render all seven routes in English and French and check for incomplete rendering or untranslated placeholders. All 14 combinations passed during implementation.
+Run `npm.cmd run build` for the production check. Run `node scripts/verify-pages.mjs` to render all seven routes in English and French and check for incomplete rendering or untranslated navigation. All 14 combinations passed during implementation.
 
 The redesigned homepage was visually checked in headless Chrome at desktop (1440 px) and mobile (390 px) widths. Both show all seven navigation links with no horizontal overflow. Temporary browser artifacts stay in the ignored `.preview/` directory. Vite excludes that directory from its file watcher.
 

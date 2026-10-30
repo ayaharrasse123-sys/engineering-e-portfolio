@@ -27,8 +27,8 @@ try {
       const html = renderToString(React.createElement(MemoryRouter, { initialEntries: [route] }, React.createElement(App)));
       if (!html.includes('id="main"') || !html.includes('Aya Harrasse')) throw new Error(`Incomplete page: ${lang} ${route}`);
       if (html.includes('[object Object]')) throw new Error(`Unrendered content: ${lang} ${route}`);
-      const placeholder = route === '/' ? (lang === 'en' ? 'Portrait to be added' : 'Portrait à ajouter') : (lang === 'en' ? 'To be added' : 'À ajouter');
-      if (!html.includes(placeholder)) throw new Error(`Missing translated placeholder: ${lang} ${route}`);
+      const skipLabel = lang === 'en' ? 'Skip to content' : 'Aller au contenu';
+      if (!html.includes(skipLabel)) throw new Error(`Missing translated navigation: ${lang} ${route}`);
       console.log(`PASS ${lang.toUpperCase()} ${route}`);
     }
   }
