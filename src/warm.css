@@ -9,7 +9,7 @@
 .skill-category h3 { font-size: 20px; }
 .skill-tags { list-style: none; padding: 0; margin: 18px 0 0; display: flex; gap: 10px; flex-wrap: wrap; }
 .skill-tags li { background: var(--pale); border: 1px solid var(--line); color: var(--navy); border-radius: 5px; font: 13px/1.5 Arial,sans-serif; padding: 7px 11px; }
-.language-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; }
+.language-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(155px,1fr)); gap: 16px; }
 .language-card { border-bottom: 2px solid var(--line); padding: 22px 12px 22px 0; }
 .language-card > svg { color: var(--coral); margin-bottom: 12px; }
 .language-card h3 { font-size: 22px; }
@@ -31,7 +31,9 @@
 .engagement-entry h2 { margin: 8px 0 18px; }
 .engagement-entry p { margin-top: 20px; font-size: 18px; }
 .engagement-entry .panel { margin-top: 15px; }
-.hobby-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; }
+.hobby-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; }
+.coursework-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; margin-top: 25px; }
+.coursework-list { margin: 18px 0 0; padding-left: 20px; color: var(--ink); line-height: 1.9; }
 .hobby-card { border: 1px solid var(--line); border-radius: 9px; overflow: hidden; }
 .hobby-visual { min-height: 185px; display: grid; place-items: center; background: var(--pale); color: var(--navy); }
 .hobby-reading { background: var(--soft); color: var(--coral); }
@@ -46,7 +48,7 @@
 @media(max-width:760px) {
  .personal-section { margin-left: 24px; margin-right: 24px; }
  .language-grid { grid-template-columns: 1fr 1fr; }
- .skills-overview-grid, .destination-grid, .hobby-grid { grid-template-columns: 1fr; }
+ .skills-overview-grid, .destination-grid, .hobby-grid, .coursework-grid { grid-template-columns: 1fr; }
  .hobby-visual { min-height: 160px; }
  .engagement-entry { grid-template-columns: 1fr; gap: 18px; }
 }

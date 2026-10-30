@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Code2, Calculator, Monitor, Users, ArrowUpRight, Globe2, Leaf, MessageCircle, Footprints, BookOpen, CookingPot, Camera } from 'lucide-react';
+import { Code2, Calculator, Monitor, Users, ArrowUpRight, Globe2, Leaf, MessageCircle, Footprints, BookOpen, CookingPot, Camera, Plane } from 'lucide-react';
 import * as content from './content';
 
 const text = (value, lang) => typeof value === 'object' && value !== null ? value[lang] || value.en : value;
@@ -23,6 +23,10 @@ export function EngagementOverview({ t, lang }) {
 }
 
 export function ActivitiesOverview({ t, lang }) {
-  const icons={running:Footprints,reading:BookOpen,cooking:CookingPot};
+  const icons={running:Footprints,reading:BookOpen,cooking:CookingPot,travel:Plane};
   return <section className="personal-section"><div className="hobby-grid">{content.activities.map(item=>{const Icon=icons[item.icon]||BookOpen;return <article className="hobby-card" key={item.title.en}><div className={`hobby-visual hobby-${item.icon}`}>{item.photo?<img src={item.photo} alt={text(item.title,lang)}/>:<Icon size={56} strokeWidth={1.1}/>}</div><div className="hobby-body"><h2>{text(item.title,lang)}</h2><p>{text(item.description,lang)}</p>{!item.photo&&<span className="photo-note"><Camera size={14}/>{t.activityPhotoPending}</span>}<details className="panel"><summary>{t.reflection}</summary><p>{text(item.reflection,lang)||t.soon}</p>{item.achievement&&<p>{text(item.achievement,lang)}</p>}</details></div></article>})}</div></section>;
+}
+
+export function CourseworkOverview({ t, lang }) {
+  return <section className="personal-section" aria-labelledby="coursework-heading"><h2 id="coursework-heading">{t.courseworkHeading}</h2><div className="coursework-grid">{content.coursework.map(group=><article className="skill-category" key={group.title.en}><h3>{text(group.title,lang)}</h3><ul className="coursework-list">{group.subjects.map(subject=><li key={subject.en}>{text(subject,lang)}</li>)}</ul></article>)}</div></section>;
 }

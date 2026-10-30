@@ -21,7 +21,7 @@ export default function ProfileHome({ t, personal }) {
           <div className="profile-affiliation"><GraduationCap size={19} /><span>{personal.school}</span></div>
           <div className="profile-affiliation"><MapPin size={17} /><span>Toulouse, France</span></div>
           <Link className="profile-link" to="/career-project">{t.career}<ArrowUpRight size={16} /></Link>
-          <div className="profile-shortcuts"><Link to="/career-project"><FileText size={15}/>{t.cvEn} / {t.cvFr}</Link></div>
+          <div className="profile-shortcuts"><a href={personal.cvEn} target="_blank" rel="noreferrer"><FileText size={15}/>{t.cvEn}</a><span aria-hidden="true"> · </span><a href={personal.cvFr} target="_blank" rel="noreferrer">{t.cvFr}</a></div>
         </aside>
         <div className="profile-biography">
           <div className="eyebrow">{t.portfolio}</div>

@@ -10,7 +10,7 @@ import './academic.css';
 import './warm.css';
 import ThemeToggle from './ThemeToggle';
 import ProfileHome from './ProfileHome';
-import { SkillsOverview, MobilityOverview, EngagementOverview, ActivitiesOverview } from './PersonalSections';
+import { SkillsOverview, MobilityOverview, EngagementOverview, ActivitiesOverview, CourseworkOverview } from './PersonalSections';
 
 const paths = ['/', '/engineering', '/international', '/sustainability', '/activities', '/development', '/career-project'];
 const icons = [Compass, BookOpen, Globe2, Leaf, Camera, BriefcaseBusiness, MoveUpRight];
@@ -40,6 +40,7 @@ function Engineering(){
   return <Frame>
     <PageHeading index={1} intro={t.academicIntro}/>
     <SkillsOverview t={t} lang={lang}/>
+    <CourseworkOverview t={t} lang={lang}/>
     <section className="personal-section engineering-projects" aria-labelledby="projects-heading">
       <h2 id="projects-heading">{t.projectsSection}</h2>
       {content.academicProjects.map((project,i)=><article className="simple-card" key={i}>

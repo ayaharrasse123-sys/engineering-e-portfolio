@@ -31,6 +31,8 @@ The production build is generated in `dist/`. The preview command serves that bu
 - `src/PersonalSections.jsx`: technical and soft skills, language levels, mobility preferences, civic participation, and hobbies.
 - `src/warm.css`: petrol-blue headings, white backgrounds, copper accents, serif typography, circular portrait, social icons, and light/dark colors.
 - `src/ThemeToggle.jsx`: accessible light/dark switch with a browser-local preference.
+- `src/cv-content.js`: CV-specific copy, contact information, and prépa schools.
+- `scripts/build-cvs.mjs`: generates the English/French printable HTML and one-page PDF CVs from the shared content.
 
 English is the first-visit default. A visitor's language choice is remembered on that browser. Changing language preserves the current route. Text content can use `{ en: 'English text', fr: 'Texte français' }` objects. Never present an unverified experience as completed.
 
@@ -68,6 +70,14 @@ Leave missing assets as `null`. The site only displays real CV/profile links whe
 
 The LinkedIn icon sits directly below the portrait. Set `personal.linkedin` to your own verified URL to activate it; while missing, it displays “To be added / À ajouter”. The adjacent GitHub icon uses `personal.github`. No other person's portrait, biography, or social profile is used.
 
+## Update the CVs
+
+Both CVs are available through the homepage and Career Project page. Generated files live in `public/media/cv/`: `aya-harrasse-en.pdf`, `aya-harrasse-fr.pdf`, and matching printable HTML versions. Edit `src/cv-content.js` for your email, school information, or CV profile; edit `src/content.js` for coursework, skills, languages, and interests.
+
+Regenerate with `node scripts/build-cvs.mjs`, then run `npm.cmd run build`. The generator uses local Chrome/Chromium and checks that each PDF has one A4 page. On this Windows installation it finds Chrome automatically; elsewhere set the `CV_CHROME_PATH` environment variable to your browser executable. Browser state and inspection images stay under ignored `.preview/`. You may also open the generated HTML in a browser and print to A4 PDF.
+
+The CVs include the supplied contact email and two prépa schools. Calendar dates and telephone are omitted until supplied. Language levels are self-assessed. No internships, project results, or certifications have been invented.
+
 ## Academic projects and experiences
 
 The Engineering page displays skills followed by a Projects section. Projects are stored in the flat `academicProjects` array in `src/content.js`, currently empty. There are no Year 1/2/3 sections on this page. The old `academicYears` array is retained as unused content for reference.
@@ -76,7 +86,7 @@ Projects support `title`, `academicYear`, `description`, `objectives`, `technolo
 
 International experience records support `title`, `destination`, `description`, `competencies`, `reflection`, `documents`. Activities support `title`, `photo`, `description`, `achievement`, `reflection`. Initiatives support `title`, `photo`, `description`, `results`, `skills`, `reflection`, `sdgs`. Professional experiences support `title`, `dates`, `description`, `results`, `skills`, `reflection`. Only add SDG numbers where there is a relevant, documented connection.
 
-The current personal content records Python, SQL, MATLAB, Linux, Windows, five self-described soft skills, Arabic (native), French (C1), English (C1), and Turkish (B1). Skills have no arbitrary percentage ratings. Running, reading, and cooking are personal interests; no competition results or specific reading history are claimed. Climate Fresk and The Trial of King Kong are confirmed participations; dates, results, and personal reflections remain to be supplied.
+The current personal content records Python, Ada, SQL, MATLAB, Linux, Windows, five self-described soft skills, Arabic (native), French (C1), English (C1), Turkish (B1), and German (beginner). Skills have no arbitrary percentage ratings. Travel, running, reading, and cooking are personal interests; no destinations, competition results, or specific reading history are claimed. Climate Fresk and The Trial of King Kong are confirmed participations; dates, results, and personal reflections remain to be supplied.
 
 `mobilityPreferences` describes Switzerland and London as future options. The first two detailed mobility templates use these destinations; the third remains unfilled. No host organisation, acceptance, or internship is claimed. `mobilitySources` links to official careers pages for the organisations of interest. `softSkills` and `technicalSkills` populate both engineering and career development.
 
