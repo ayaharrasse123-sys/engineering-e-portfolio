@@ -27,7 +27,6 @@ export default function ProfileHome({ t, personal }) {
           <div className="eyebrow">{t.portfolio}</div>
           <h1 id="profile-name">Aya Harrasse<span>.</span></h1>
           <p className="profile-program">{t.subtitle}</p>
-          <p className="profile-greeting">{t.hello} Aya.</p>
           <p>{t.intro}</p>
           <div className="profile-interests"><span>{t.interestsLabel}</span><p>{t.interests}</p></div>
           <Link className="text-link profile-explore" to="/engineering">{t.explore}<ArrowRight size={17} /></Link>
