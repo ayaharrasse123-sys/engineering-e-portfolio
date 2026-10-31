@@ -216,6 +216,8 @@ button:focus-visible, a:focus-visible, summary:focus-visible { outline-color: va
 /* Photo-led university profiles, kept in reading order on narrow screens. */
 .model-card .model-organization { color: var(--navy); font-size: 15px; margin: 10px 0 18px; }
 .model-card .model-inspiration { font-size: 16px; line-height: 1.8; }
+.model-portrait-link { display: block; width: 100%; max-width: 240px; margin: 0 auto 24px; }
+.model-portrait { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: center 25%; border-radius: 8px; }
 .destination-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
 .destination-card { padding: 0; overflow: hidden; min-width: 0; }
 .destination-photo { display: block; width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: cover; }

@@ -113,6 +113,8 @@ When adding content, manually inspect all seven routes at phone and desktop widt
 
 ## Mobility and activity photographs
 
+Role model portraits are stored in `public/media/role-models` and link to their source profiles: [Mirco Musolesi](https://www.mircomusolesi.org/), [Çağlar Gülçehre at EPFL](https://people.epfl.ch/caglar.gulcehre), and [Martin Vechev at SRI Lab](https://www.sri.inf.ethz.ch/people/martin).
+
 The International page presents four future study ambitions: UCL, EPFL, ETH Zurich, and NUS. Each profile includes a study motivation, a possible career connection, a cultural motivation, and an official programme link. These are imagined plans, not completed exchanges or confirmed placements. Career Project ends after role models; the professional roadmap has been removed from Career Development.
 
 Campus image sources:
