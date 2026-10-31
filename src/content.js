@@ -18,10 +18,10 @@ export const initiatives = [
   { title: bilingual('The Trial of King Kong', 'Le Procès de King Kong'), icon: 'dialogue', status: bilingual('Participated', 'Participation réalisée'), description: bilingual('I participated in The Trial of King Kong, an interactive theatre event addressing gender-based and sexual violence.', 'J’ai participé au Procès de King Kong, un spectacle interactif de sensibilisation aux violences sexistes et sexuelles.'), results: '', skills: '', reflection: '', photo: null, sdgs: [] },
 ];
 export const activities = [
-  { title: bilingual('Travel', 'Voyage'), icon: 'travel', description: bilingual('I enjoy travelling and discovering new places.', 'J’aime voyager et découvrir de nouveaux endroits.'), achievement: '', reflection: '', photo: null },
-  { title: bilingual('Running', 'Course à pied'), icon: 'running', description: bilingual('I enjoy running in my free time.', 'J’aime pratiquer la course à pied pendant mon temps libre.'), achievement: '', reflection: '', photo: null },
-  { title: bilingual('Reading', 'Lecture'), icon: 'reading', description: bilingual('Reading is one of my personal interests.', 'La lecture fait partie de mes centres d’intérêt.'), achievement: '', reflection: '', photo: null },
-  { title: bilingual('Cooking', 'Cuisine'), icon: 'cooking', description: bilingual('I enjoy cooking outside my studies.', 'J’aime cuisiner en dehors de mes études.'), achievement: '', reflection: '', photo: null },
+  { title: bilingual('Travel', 'Voyage'), icon: 'travel', description: bilingual('I enjoy travelling and discovering new places.', 'J’aime voyager et découvrir de nouveaux endroits.'), achievement: '', reflection: '', photo: '/media/activities/travel.jpg' },
+  { title: bilingual('Running', 'Course à pied'), icon: 'running', description: bilingual('I enjoy running in my free time.', 'J’aime pratiquer la course à pied pendant mon temps libre.'), achievement: '', reflection: '', photo: '/media/activities/running.jpg' },
+  { title: bilingual('Reading', 'Lecture'), icon: 'reading', description: bilingual('Reading is one of my personal interests.', 'La lecture fait partie de mes centres d’intérêt.'), achievement: '', reflection: '', photo: '/media/activities/reading.jpg' },
+  { title: bilingual('Cooking', 'Cuisine'), icon: 'cooking', description: bilingual('I enjoy cooking outside my studies.', 'J’aime cuisiner en dehors de mes études.'), achievement: '', reflection: '', photo: '/media/activities/cooking.jpg' },
 ];
 export const professionalExperiences = []; // title, dates, description, skills, reflection
 export const technicalSkills = [
@@ -44,8 +44,34 @@ export const softSkills = [
   { title: bilingual('Adaptability', 'Adaptabilité'), description: bilingual('Adjusting to new tools and working situations.', 'S’adapter à de nouveaux outils et contextes de travail.') },
 ];
 export const mobilityPreferences = [
-  { destination: bilingual('Switzerland', 'Suisse'), code: 'CH', description: bilingual('I would like to complete an international study or internship experience in Switzerland, with a focus on computer science and artificial intelligence.', 'Je souhaite effectuer une mobilité d’études ou un stage en Suisse, dans le domaine de l’informatique et de l’intelligence artificielle.') },
-  { destination: bilingual('London, United Kingdom', 'Londres, Royaume-Uni'), code: 'UK', description: bilingual('I would like to explore opportunities in London, particularly in software engineering and artificial intelligence.', 'Je souhaite explorer les possibilités de mobilité à Londres, notamment en génie logiciel et en intelligence artificielle.') },
+  {
+    code: 'UK', name: 'University College London (UCL)', destination: bilingual('London, United Kingdom', 'Londres, Royaume-Uni'), photo: '/media/mobility/ucl.jpg',
+    description: bilingual('At UCL, I would like to deepen my understanding of artificial intelligence and machine learning. Its AI-focused study options make it a university I would like to explore for a future study experience, building on my computer science training at ENSEEIHT.', 'À UCL, je souhaiterais approfondir mes connaissances en intelligence artificielle et en apprentissage automatique. Ses formations orientées vers l’IA en font une université que j’aimerais explorer pour un futur séjour d’études, dans la continuité de ma formation en informatique à l’ENSEEIHT.'),
+    career: bilingual('I imagine using this experience to move towards a career as an AI or software engineer. Working on a team project in English would help me explain technical ideas clearly and connect theory with practical applications.', 'J’imagine cette expérience comme une étape vers un métier d’ingénieure en IA ou en logiciel. Un projet en équipe en anglais m’aiderait à expliquer clairement mes idées techniques et à relier la théorie aux applications concrètes.'),
+    culture: bilingual('Living in London would also mean discovering a multicultural city, becoming more independent, and using English every day beyond the classroom.', 'Vivre à Londres serait aussi l’occasion de découvrir une ville multiculturelle, de gagner en autonomie et de pratiquer l’anglais chaque jour en dehors des cours.'),
+    url: 'https://www.ucl.ac.uk/engineering/study/ai-and-machine-learning'
+  },
+  {
+    code: 'CH', name: 'EPFL', destination: bilingual('Lausanne, Switzerland', 'Lausanne, Suisse'), photo: '/media/mobility/epfl.jpg',
+    description: bilingual('EPFL interests me for its computer science programme and its artificial intelligence and machine learning study areas. I would like to explore how mathematical foundations, programming, and experimentation come together in a research-oriented environment.', 'L’EPFL m’intéresse pour sa formation en informatique et ses domaines d’études en intelligence artificielle et en apprentissage automatique. J’aimerais découvrir comment les bases mathématiques, la programmation et l’expérimentation se rejoignent dans un environnement tourné vers la recherche.'),
+    career: bilingual('My goal would be to strengthen my Python and data analysis skills through a supervised project, and to discover whether applied AI research could become part of my professional path.', 'Mon objectif serait de renforcer mes compétences en Python et en analyse de données grâce à un projet encadré, et de découvrir si la recherche appliquée en IA pourrait faire partie de mon parcours professionnel.'),
+    culture: bilingual('Lausanne would let me discover life in Switzerland while studying in an international community. I would also enjoy exploring the region around Lake Geneva and balancing my studies with running outdoors.', 'Lausanne me permettrait de découvrir la vie en Suisse au sein d’une communauté internationale. J’aimerais aussi explorer la région du lac Léman et équilibrer mes études avec la course à pied en plein air.'),
+    url: 'https://www.epfl.ch/schools/ic/education/master/computer-science/specializations-master-info/'
+  },
+  {
+    code: 'CH', name: 'ETH Zurich', destination: bilingual('Zurich, Switzerland', 'Zurich, Suisse'), photo: '/media/mobility/eth.jpg',
+    description: bilingual('ETH Zurich is another university I would like to consider. Its computer science studies include machine intelligence, which matches my interest in understanding how algorithms learn from data and solve complex problems.', 'L’ETH Zurich est une autre université que j’aimerais envisager. Ses études en informatique abordent l’intelligence machine, en lien avec mon envie de comprendre comment les algorithmes apprennent à partir des données et résolvent des problèmes complexes.'),
+    career: bilingual('I would like to develop a more rigorous approach to algorithms and machine learning, then apply it in an engineering project. This could help me prepare for technical roles that combine software development with AI.', 'Je souhaiterais développer une approche plus rigoureuse des algorithmes et de l’apprentissage automatique, puis l’appliquer dans un projet d’ingénierie. Cela pourrait me préparer à des métiers techniques associant développement logiciel et IA.'),
+    culture: bilingual('Living in Zurich would challenge me to adapt to a German-speaking environment. As a beginner in German, I would see this as a chance to practise the language and become more confident in unfamiliar situations.', 'Vivre à Zurich me demanderait de m’adapter à un environnement germanophone. Débutante en allemand, j’y verrais une occasion de pratiquer la langue et de prendre confiance face à des situations nouvelles.'),
+    url: 'https://ethz.ch/en/studies/master/degree-programmes/engineering-sciences/computer-science.html'
+  },
+  {
+    code: 'SG', name: 'National University of Singapore (NUS)', destination: bilingual('Singapore', 'Singapour'), photo: '/media/mobility/nus.jpg',
+    description: bilingual('At NUS, I would like to explore computer science and artificial intelligence in a different academic setting. Its computing and AI programmes make Singapore an interesting destination for a future study experience beyond Europe.', 'À NUS, j’aimerais explorer l’informatique et l’intelligence artificielle dans un cadre universitaire différent. Ses formations en informatique et en IA font de Singapour une destination intéressante pour un futur séjour d’études hors d’Europe.'),
+    career: bilingual('I imagine contributing to a practical software or AI project with an international team. My aim would be to improve my programming, learn different approaches to problem-solving, and better understand how I could work as an engineer internationally.', 'Je m’imagine contribuer à un projet concret en logiciel ou en IA avec une équipe internationale. Mon objectif serait de progresser en programmation, de découvrir d’autres façons de résoudre les problèmes et de mieux comprendre comment exercer le métier d’ingénieure à l’international.'),
+    culture: bilingual('Singapore would be an opportunity to discover Southeast Asia and a multicultural, English-speaking study environment. Adapting to daily life far from home would help me build independence and intercultural communication skills.', 'Singapour serait l’occasion de découvrir l’Asie du Sud-Est et un environnement d’études multiculturel et anglophone. M’adapter à la vie quotidienne loin de chez moi m’aiderait à gagner en autonomie et à développer ma communication interculturelle.'),
+    url: 'https://www.comp.nus.edu.sg/programmes/'
+  },
 ];
 export const mobilitySources = [
   { title: 'Google DeepMind', url: 'https://deepmind.google/careers/' },
@@ -53,26 +79,3 @@ export const mobilitySources = [
 ];
 export const certifications = [];
 export const roleModels = [1, 2, 3].map(id => ({ id, name: '', photo: null, position: '', organization: '', education: '', journey: '', achievements: '', qualities: '', inspiration: '', learning: '', sources: [] }));
-export const mobilityProjects = [1, 2, 3].map(id => ({ id, destination: '', institution: '', type: '', objectives: '', skills: '', motivation: '', roleModel: id, preparation: '', outcomes: '', feasibility: '', status: '' }));
-Object.assign(mobilityProjects[0], {
-  destination: bilingual('Switzerland', 'Suisse'),
-  type: bilingual('Study exchange or internship — format to determine', 'Échange universitaire ou stage — format à préciser'),
-  objectives: bilingual('Develop my computer science skills and explore applications of artificial intelligence.', 'Développer mes compétences en informatique et explorer les applications de l’intelligence artificielle.'),
-  skills: bilingual('Programming, practical problem-solving, and working in an international team.', 'Programmation, résolution de problèmes concrets et travail dans une équipe internationale.'),
-  motivation: bilingual('Discover the Swiss technology and research environment.', 'Découvrir l’environnement technologique et scientifique suisse.'),
-  preparation: bilingual('Identify host institutions and suitable openings; check eligibility and deadlines; prepare my CV and application.', 'Identifier les établissements d’accueil et les offres adaptées ; vérifier les conditions et les dates limites ; préparer mon CV et ma candidature.'),
-  outcomes: bilingual('Practical experience in an international academic or professional setting.', 'Une expérience concrète dans un cadre académique ou professionnel international.'),
-  feasibility: bilingual('Host, dates, funding, housing, and administrative requirements remain to be assessed.', 'Organisme d’accueil, dates, financement, logement et démarches administratives à étudier.'),
-  status: bilingual('Exploring options — no placement confirmed', 'En cours d’exploration — aucune mobilité confirmée'),
-});
-Object.assign(mobilityProjects[1], {
-  destination: bilingual('London, United Kingdom', 'Londres, Royaume-Uni'),
-  type: bilingual('Study exchange or internship — format to determine', 'Échange universitaire ou stage — format à préciser'),
-  objectives: bilingual('Gain practical experience in software engineering or artificial intelligence and use English in a professional setting.', 'Acquérir une expérience pratique en génie logiciel ou en intelligence artificielle et utiliser l’anglais dans un cadre professionnel.'),
-  skills: bilingual('Programming, teamwork, and technical communication in English.', 'Programmation, travail en équipe et communication technique en anglais.'),
-  motivation: bilingual('Explore London’s technology sector. Google DeepMind and OpenAI are examples of organisations that interest me; a specific host is not selected.', 'Explorer le secteur technologique londonien. Google DeepMind et OpenAI font partie des organisations qui m’intéressent ; aucun organisme d’accueil n’est sélectionné.'),
-  preparation: bilingual('Research opportunities suited to my level; check application requirements; prepare my CV and supporting documents.', 'Rechercher des possibilités adaptées à mon niveau ; vérifier les conditions de candidature ; préparer mon CV et les pièces demandées.'),
-  outcomes: bilingual('International experience and a better understanding of software and AI work in practice.', 'Une expérience internationale et une meilleure compréhension des métiers du logiciel et de l’IA.'),
-  feasibility: bilingual('Host, dates, funding, housing, and administrative requirements remain to be assessed.', 'Organisme d’accueil, dates, financement, logement et démarches administratives à étudier.'),
-  status: bilingual('Exploring options — no placement confirmed', 'En cours d’exploration — aucune mobilité confirmée'),
-});

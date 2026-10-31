@@ -109,3 +109,17 @@ Run `npm.cmd run build` for the production check. Run `node scripts/verify-pages
 The redesigned homepage was visually checked in headless Chrome at desktop (1440 px) and mobile (390 px) widths. Both show all seven navigation links with no horizontal overflow. Temporary browser artifacts stay in the ignored `.preview/` directory. Vite excludes that directory from its file watcher.
 
 When adding content, manually inspect all seven routes at phone and desktop widths, keyboard focus, language switching, expandable panels, and the three mobility tabs. OS/browser reduced-motion settings disable animations. Page titles, HTML language, and description metadata update when navigating or switching languages.
+
+
+## Mobility and activity photographs
+
+The International page presents four future study ambitions: UCL, EPFL, ETH Zurich, and NUS. Each profile includes a study motivation, a possible career connection, a cultural motivation, and an official programme link. These are imagined plans, not completed exchanges or confirmed placements. Career Project ends after role models; the professional roadmap has been removed from Career Development.
+
+Campus image sources:
+
+- UCL: https://tvlocations.net/blackbirds.htm (image: https://tvlocations.net/unilondon.jpg).
+- EPFL: https://www.epfl.ch/wp-content/uploads/2020/01/EPFL-vue-aerienne.jpg.
+- ETH Zurich: https://ethz.ch/de/news-und-veranstaltungen/eth-news/news/2022/10/auch-im-dritten-ranking-des-jahres-top.html.
+- NUS University Town: https://www.world-architects.com/zh/stx-landscape-architects-singapore/project/nus-university-town-nus-utown.
+
+Activities use illustrative Unsplash photographs, labelled as illustrations rather than personal photographs: travel (`photo-1488646953014-85cb44e25828`), running (`photo-1476480862126-209bfaa8edc8`), reading (`photo-1507842217343-583bb7270b66`), and cooking (`photo-1556911220-bff31c812dba`). All eight images are stored locally in `public/media` so the pages do not rely on external image requests.

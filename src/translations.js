@@ -37,3 +37,18 @@ Object.assign(translations.fr, {
   interestsLabel: 'Centres d’intérêt', journeyLabel: 'MON PARCOURS', workLabel: 'PROJETS ET PRODUCTIONS',
   chapterDescriptions: ['Enseignements, projets académiques et réflexions sur trois années.', 'Expériences internationales, langues et apprentissages interculturels.', 'Développement durable, engagement citoyen et ingénierie responsable.', 'Sports, créativité, culture et vie au-delà des études.', 'Expériences professionnelles, compétences et feuille de route.', 'CV, pitch vidéo, trois modèles professionnels et trois projets de mobilité.'],
 });
+
+Object.assign(translations.en, {
+  internationalIntro: 'My language skills and future study ambitions at UCL, EPFL, ETH Zurich, and NUS in Singapore.',
+  mobilityPreferenceIntro: 'Four universities where I can imagine developing my future in computer science and AI. These are study ambitions; the format, eligibility, funding, and opportunities available through ENSEEIHT remain to be checked.',
+  mobilityCareerHeading: 'How it fits my career', mobilityCultureHeading: 'Beyond the classroom', universityProgramme: 'Explore the university programmes', illustrativePhoto: 'Illustrative photograph',
+});
+Object.assign(translations.fr, {
+  internationalIntro: 'Mes compétences linguistiques et mes ambitions de séjour d’études à UCL, à l’EPFL, à l’ETH Zurich et à NUS à Singapour.',
+  mobilityPreferenceIntro: 'Quatre universités où j’imagine construire mon avenir en informatique et en IA. Ce sont des souhaits d’études : le format, les conditions d’accès, le financement et les possibilités proposées par l’ENSEEIHT restent à vérifier.',
+  mobilityCareerHeading: 'Le lien avec mon projet professionnel', mobilityCultureHeading: 'Au-delà des cours', universityProgramme: 'Découvrir les formations de l’université', illustrativePhoto: 'Photographie d’illustration',
+});
+translations.en.chapterDescriptions[4] = 'Professional experiences, technical skills, and personal competencies.';
+translations.en.chapterDescriptions[5] = 'CVs, a video pitch, and professional role models.';
+translations.fr.chapterDescriptions[4] = 'Expériences professionnelles, compétences techniques et humaines.';
+translations.fr.chapterDescriptions[5] = 'CV, pitch vidéo et modèles professionnels.';
