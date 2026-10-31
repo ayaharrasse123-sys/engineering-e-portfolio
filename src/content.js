@@ -78,4 +78,17 @@ export const mobilitySources = [
   { title: 'OpenAI', url: 'https://openai.com/careers/' },
 ];
 export const certifications = [];
-export const roleModels = [1, 2, 3].map(id => ({ id, name: '', photo: null, position: '', organization: '', education: '', journey: '', achievements: '', qualities: '', inspiration: '', learning: '', sources: [] }));
+export const roleModels = [
+  {
+    id: 1, name: 'Mirco Musolesi', organization: 'University College London',
+    inspiration: bilingual('I admire Professor Mirco Musolesi for his research on artificial intelligence, reinforcement learning, and AI safety. His work inspires me to explore how intelligent agents can make reliable decisions in complex environments. Studying at UCL would allow me to deepen my knowledge of these topics and discover new approaches to building responsible AI systems.', 'J’admire le professeur Mirco Musolesi pour ses recherches en intelligence artificielle, en apprentissage par renforcement et en sécurité de l’IA. Ses travaux m’inspirent à explorer comment les agents intelligents peuvent prendre des décisions fiables dans des environnements complexes. Étudier à UCL me permettrait d’approfondir mes connaissances sur ces sujets et de découvrir de nouvelles approches pour construire des systèmes d’IA responsables.'),
+  },
+  {
+    id: 2, name: 'Çağlar Gülçehre', organization: 'EPFL',
+    inspiration: bilingual('Professor Çağlar Gülçehre inspires me through his work on reinforcement learning, reasoning, and AI alignment. I am particularly interested in how AI systems can learn from feedback and improve their reasoning abilities. His research reflects my ambition to understand the learning mechanisms behind modern artificial intelligence.', 'Le professeur Çağlar Gülçehre m’inspire par ses travaux sur l’apprentissage par renforcement, le raisonnement et l’alignement de l’IA. Je m’intéresse particulièrement à la manière dont les systèmes d’IA peuvent apprendre à partir de retours et améliorer leurs capacités de raisonnement. Ses recherches reflètent mon ambition de comprendre les mécanismes d’apprentissage qui sous-tendent l’intelligence artificielle moderne.'),
+  },
+  {
+    id: 3, name: 'Martin Vechev', organization: 'ETH Zurich',
+    inspiration: bilingual('Professor Martin Vechev is a role model for his contributions to safe and reliable artificial intelligence. His research combines machine learning with automated reasoning to improve the trustworthiness of AI systems. I would like to explore how mathematical and computational methods can help develop AI that is both powerful and dependable.', 'Le professeur Martin Vechev est un modèle pour ses contributions à une intelligence artificielle sûre et fiable. Ses recherches associent l’apprentissage automatique au raisonnement automatisé pour renforcer la confiance dans les systèmes d’IA. Je souhaiterais explorer comment les méthodes mathématiques et informatiques peuvent contribuer à développer une IA à la fois puissante et digne de confiance.'),
+  },
+];

@@ -52,3 +52,7 @@ translations.en.chapterDescriptions[4] = 'Professional experiences, technical sk
 translations.en.chapterDescriptions[5] = 'CVs, a video pitch, and professional role models.';
 translations.fr.chapterDescriptions[4] = 'Expériences professionnelles, compétences techniques et humaines.';
 translations.fr.chapterDescriptions[5] = 'CV, pitch vidéo et modèles professionnels.';
+translations.en.models = 'My Scientific Role Models';
+translations.fr.models = 'Mes modèles scientifiques';
+translations.en.modelsText = 'Three researchers who inspire my interest in responsible, safe, and reliable artificial intelligence.';
+translations.fr.modelsText = 'Trois chercheurs qui inspirent mon intérêt pour une intelligence artificielle responsable, sûre et fiable.';
