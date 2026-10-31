@@ -56,3 +56,5 @@ translations.en.models = 'My Scientific Role Models';
 translations.fr.models = 'Mes modèles scientifiques';
 translations.en.modelsText = 'Three researchers who inspire my interest in responsible, safe, and reliable artificial intelligence.';
 translations.fr.modelsText = 'Trois chercheurs qui inspirent mon intérêt pour une intelligence artificielle responsable, sûre et fiable.';
+translations.en.pitchNote = '3 min 49 sec · My background, interests, and ambitions';
+translations.fr.pitchNote = '3 min 49 s · Mon parcours, mes intérêts et mes ambitions';
